@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9623793C1ED3517F0068E242 /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9623793B1ED3517F0068E242 /* Listener.swift */; };
 		965819691ECC9FF70083621F /* XvBluetoothMotion.h in Headers */ = {isa = PBXBuildFile; fileRef = 965819671ECC9FF70083621F /* XvBluetoothMotion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		965819721ECCA0770083621F /* XvBluetoothMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965819711ECCA0770083621F /* XvBluetoothMotion.swift */; };
 		965819761ECCA0F00083621F /* XvBluetoothMotionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965819751ECCA0F00083621F /* XvBluetoothMotionConstants.swift */; };
 		965819781ECCA16B0083621F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965819771ECCA16B0083621F /* Utils.swift */; };
-		9658197A1ECCA4ED0083621F /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965819791ECCA4ED0083621F /* Listener.swift */; };
 		9658197C1ECCBA950083621F /* SampleArduinoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658197B1ECCBA950083621F /* SampleArduinoCode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9623793B1ED3517F0068E242 /* Listener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Listener.swift; path = Private/Listener.swift; sourceTree = "<group>"; };
 		965819641ECC9FF70083621F /* XvBluetoothMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XvBluetoothMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		965819671ECC9FF70083621F /* XvBluetoothMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XvBluetoothMotion.h; sourceTree = "<group>"; };
 		965819681ECC9FF70083621F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		965819711ECCA0770083621F /* XvBluetoothMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XvBluetoothMotion.swift; path = Public/XvBluetoothMotion.swift; sourceTree = "<group>"; };
 		965819751ECCA0F00083621F /* XvBluetoothMotionConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XvBluetoothMotionConstants.swift; path = Public/XvBluetoothMotionConstants.swift; sourceTree = "<group>"; };
 		965819771ECCA16B0083621F /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Private/Utils.swift; sourceTree = "<group>"; };
-		965819791ECCA4ED0083621F /* Listener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Listener.swift; path = Private/Listener.swift; sourceTree = "<group>"; };
 		9658197B1ECCBA950083621F /* SampleArduinoCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleArduinoCode.swift; path = Private/SampleArduinoCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +75,7 @@
 		965819741ECCA0C60083621F /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				965819791ECCA4ED0083621F /* Listener.swift */,
+				9623793B1ED3517F0068E242 /* Listener.swift */,
 				965819771ECCA16B0083621F /* Utils.swift */,
 				9658197B1ECCBA950083621F /* SampleArduinoCode.swift */,
 				965819731ECCA0BD0083621F /* Basics */,
@@ -168,8 +168,8 @@
 				965819761ECCA0F00083621F /* XvBluetoothMotionConstants.swift in Sources */,
 				965819721ECCA0770083621F /* XvBluetoothMotion.swift in Sources */,
 				965819781ECCA16B0083621F /* Utils.swift in Sources */,
-				9658197A1ECCA4ED0083621F /* Listener.swift in Sources */,
 				9658197C1ECCBA950083621F /* SampleArduinoCode.swift in Sources */,
+				9623793C1ED3517F0068E242 /* Listener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
