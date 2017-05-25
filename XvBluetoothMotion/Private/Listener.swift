@@ -104,7 +104,6 @@ class Listener:NSObject {
         
     }
     
-    
 }
 
 //MARK: - CENTRAL MANAGER FUNCTIONS -
