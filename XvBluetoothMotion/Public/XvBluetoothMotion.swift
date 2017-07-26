@@ -31,7 +31,6 @@
  */
 
 /*
- 
 
  addListener(serviceUUID: service, xCharUUID: x, yCharUUID: y, zCharUUID: z)
  

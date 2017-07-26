@@ -14,5 +14,11 @@ public class XvBluetoothMotionConstants {
     //MARK: - NOTIFICATIONS -
     //MARK: when bluetooth data is received
     public static let kXvBluetoothMotionReceived:String = "kXvBluetoothMotionReceived"
+    
+    public static let kXvBluetoothMotionCentralManagerUpdateState:String = "kXvBluetoothMotionCentralManagerUpdateState"
+    
+    public static let kXvBluetoothMotionServiceDiscovered:String = "kXvBluetoothMotionServiceDiscovered"
+    
+    public static let kXvBluetoothMotionScanEndError:String = "kXvBluetoothMotionScanEndError"
 
 }

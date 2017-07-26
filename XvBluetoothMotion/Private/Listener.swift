@@ -100,6 +100,11 @@ class Listener:NSObject {
         //output no device found if debugging
         if (debug && _serviceUUID != nil){
             print("MOTION: Scan found no devices with service ID", _serviceUUID!)
+            
+            Utils.postNotification(
+                name: XvBluetoothMotionConstants.kXvBluetoothMotionScanEndError,
+                userInfo: ["serviceUUID" : _serviceUUID!])
+            
         }
         
     }
@@ -115,23 +120,31 @@ extension Listener: CBCentralManagerDelegate {
         
         //output status during debugging
         
+        var msg:String = ""
+        
         if (debug){
             switch central.state {
-                
+
             case .poweredOn:
-                print("MOTION: Bluetooth on this device is currently powered on.")
+                msg = "MOTION: Bluetooth on this device is currently powered on."
             case .poweredOff:
-                print("MOTION: Bluetooth on this device is currently powered off.")
+                msg = "MOTION: Bluetooth on this device is currently powered off."
             case .unsupported:
-                print("MOTION: This device does not support Bluetooth Low Energy.")
+                msg = "MOTION: This device does not support Bluetooth Low Energy."
             case .unauthorized:
-                print("MOTION: This app is not authorized to use Bluetooth Low Energy.")
+                msg = "MOTION: This app is not authorized to use Bluetooth Low Energy."
             case .resetting:
-                print("MOTION: The BLE Manager is resetting; a state update is pending.")
+                msg = "MOTION: The BLE Manager is resetting; a state update is pending."
             case .unknown:
-                print("MOTION: The state of the BLE Manager is unknown.")
+                msg = "MOTION: The state of the BLE Manager is unknown."
                 
             }
+            
+            print(msg)
+            
+            Utils.postNotification(
+                name: XvBluetoothMotionConstants.kXvBluetoothMotionCentralManagerUpdateState,
+                userInfo: ["message" : msg])
         }
         
     }
@@ -201,6 +214,12 @@ extension Listener: CBPeripheralDelegate {
                 if (debug){
                     print("MOTION: Discovered service =", service)
                 }
+                
+                Utils.postNotification(
+                    name: XvBluetoothMotionConstants.kXvBluetoothMotionServiceDiscovered,
+                    userInfo: [
+                        "serviceUUID" : service.uuid]
+                )
                 
                 //capture the service from the device
                 _service = service
