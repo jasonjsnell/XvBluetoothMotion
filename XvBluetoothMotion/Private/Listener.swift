@@ -91,7 +91,7 @@ class Listener:NSObject {
         
     }
     
-    internal func scanEnded(){
+    @objc internal func scanEnded(){
         
         //stop timer and scan
         scanTimer.invalidate()
